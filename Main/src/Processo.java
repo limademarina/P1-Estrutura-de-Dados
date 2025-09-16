@@ -1,18 +1,25 @@
 public class Processo {
     private int id;
     private String nome;
-    private int prioridade;
+    private int prioridade;          // 1 - Alta, 2 - Média, 3 - Baixa
     private int ciclosNecessarios;
     private String recursoNecessario;
-    private boolean bloqueado;
+    private boolean jaSolicitouRecurso;
 
-    public Processos(int id, String nome, int prioridade, int ciclosNecessarios, String recursoNecessario) {
+    public Processo(int id, String nome, int prioridade, int ciclosNecessarios, String recursoNecessario) {
+        this.id = id;
+        this.nome = nome;
+        this.prioridade = prioridade;
+        this.ciclosNecessarios = ciclosNecessarios;
+        this.recursoNecessario = recursoNecessario;
+    }
+
+    public Processo(int id, String nome, int prioridade, int ciclosNecessarios) {
         this.id = id;
         this.nome = nome;
         this.prioridade = prioridade;
         this.ciclosNecessarios = ciclosNecessarios;
         this.recursoNecessario = null;
-        this.bloqueado = false;
     }
 
     public int getId() {
@@ -55,19 +62,22 @@ public class Processo {
         this.recursoNecessario = recursoNecessario;
     }
 
-    public boolean isBloqueado() {
-        return bloqueado;
+    public boolean isJaSolicitouRecurso() {
+        return jaSolicitouRecurso;
     }
 
-    public void setBloqueado(boolean bloqueado) {
-        this.bloqueado = bloqueado;
+    public void setJaSolicitouRecurso(boolean jaSolicitouRecurso) {
+        this.jaSolicitouRecurso = jaSolicitouRecurso;
     }
 
-    public Processos(int id, String nome, int prioridade, int ciclosNecessarios, String recursoNecessario) {
-        this.id = id;
-        this.nome = nome;
-        this.prioridade = prioridade;
-        this.ciclosNecessarios = ciclosNecessarios;
-        this.recursoNecessario = recursoNecessario;
+    @Override
+    public String toString() {
+        return "Processo {" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", prioridade=" + prioridade +
+                ", ciclosNecessarios=" + ciclosNecessarios +
+                ", recursoNecessario='" + recursoNecessario + '\'' +
+                '}';
     }
 }
