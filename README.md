@@ -12,14 +12,30 @@ O projeto consiste em um simulador de escalonador de processos implementado em J
 
 ### Instruções: 
 Estar na pasta Main
-ls ->
+
+ls
+
+cd .\Main\
+
+Imagem da pasta Main do projeto
+
+![img_1.png](img_1.png)
+
+
+
+Executar esse o comando abaixo para compilar
 ```
 javac -d out src/*.java
 ```
 
 voltar para a pasta raiz onde esta o arquivo com csv
+
 cd ..
+
 ls
+
+Imagem da raiz do projeto com a geração do arquivo csv
+![img.png](img.png)
 
 aqui rodar o script
 
